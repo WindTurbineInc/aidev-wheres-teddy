@@ -11,6 +11,7 @@ class FileStorage(Storage):
         self.base_storage_path = base_storage_path
 
     def make_dirs(self, dir_path):
+        print("PATH " + os.path.join(self.base_storage_path, dir_path))
         os.makedirs(os.path.join(self.base_storage_path, dir_path), exist_ok=True)
 
     def list_files(self, dir_path, pattern):
